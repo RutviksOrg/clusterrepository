@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - RutviksOrg/clusterrepository
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.23.251.147.105.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null

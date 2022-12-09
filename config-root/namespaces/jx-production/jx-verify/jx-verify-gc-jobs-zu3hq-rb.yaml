@@ -2,10 +2,10 @@
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: jx-verify-gc-jobs-hkomm
+  name: jx-verify-gc-jobs-zu3hq
   annotations:
     meta.helm.sh/release-name: 'jx-verify'
-  namespace: jx-staging
+  namespace: jx-production
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 roleRef:
