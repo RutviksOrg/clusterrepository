@@ -6,6 +6,10 @@ data:
       repos:
       - RutviksOrg/clusterrepository
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - rutvikgitbot/aspjxproject
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -21,6 +25,11 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      rutvikgitbot/aspjxproject:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
     heart: {}
     label:
       additional_labels: null
@@ -28,6 +37,20 @@ data:
     plugins:
       RutviksOrg/clusterrepository:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      rutvikgitbot/aspjxproject:
       - approve
       - assign
       - help
@@ -53,6 +76,11 @@ data:
     - repos:
       - RutviksOrg/clusterrepository
       trusted_org: todo
+    - repos:
+      - rutvikgitbot/aspjxproject
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
