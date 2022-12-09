@@ -1,0 +1,10 @@
+# Source: aspjxproject/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: aspjxproject-aspjxproject
+  annotations:
+    meta.helm.sh/release-name: 'aspjxproject'
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
