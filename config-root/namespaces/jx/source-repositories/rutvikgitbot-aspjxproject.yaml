@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: rutvikgitbot
+    provider: github
+    repository: aspjxproject
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: rutvikgitbot-aspjxproject
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/rutvikgitbot/aspjxproject.git
+  org: rutvikgitbot
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: aspjxproject
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/rutvikgitbot/aspjxproject
