@@ -34,6 +34,19 @@
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx-staging/jx-verify
+  - apiVersion: v1
+    appVersion: 0.0.1
+    description: A Helm chart for Kubernetes
+    firstDeployed: "2022-12-09T04:07:07Z"
+    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
+    lastDeployed: "2022-12-09T04:07:07Z"
+    logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=jenkinsxdemo-371022&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Flfs268-lab%2Fnamespace_name%2Fjx-staging%2Fcontainer_name%2Faspjxproject&dateRangeUnbound=both
+    name: aspjxproject
+    releaseName: aspjxproject
+    repositoryName: dev
+    repositoryUrl: http://chartmuseum-jx.23.251.147.105.nip.io
+    resourcePath: config-root/namespaces/jx-staging/aspjxproject
+    version: 0.0.1
 - namespace: jx
   path: helmfiles/jx/helmfile.yaml
   releases:

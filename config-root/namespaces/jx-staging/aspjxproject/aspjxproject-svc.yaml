@@ -1,0 +1,20 @@
+# Source: aspjxproject/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: aspjxproject
+  labels:
+    chart: "aspjxproject-0.0.1"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'aspjxproject'
+  namespace: jx-staging
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: aspjxproject-aspjxproject
