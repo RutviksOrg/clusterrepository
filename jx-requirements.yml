@@ -5,27 +5,50 @@ spec:
     enabled: false
     schedule: ""
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    clusterName: lfs268-lab
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
     gitKind: github
     gitName: github
     gitServer: https://github.com
+    gke:
+      projectNumber: "994595681231"
+    project: jenkinsxdemo-371022
     provider: gke
     registry: gcr.io
+    zone: us-central1-a
   environments:
   - key: dev
+    owner: RutviksOrg
+    repository: clusterrepository
   - key: staging
   - key: production
   ingress:
     domain: ""
-    externalDNS: false
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
-      production: false
+      production: true
+  pipelineUser:
+    username: rutvikgitbot
   repository: nexus
   secretStorage: vault
-  vault: {}
+  storage:
+  - name: logs
+    url: gs://logs-lfs268-lab-da449239fee7
+  - name: reports
+    url: gs://reports-lfs268-lab-da449239fee7
+  - name: repository
+    url: gs://repository-lfs268-lab-da449239fee7
+  terraformVault: true
+  vault:
+    bucket: vault-lfs268-lab-da449239fee7
+    key: crypto-key-lfs268-lab-da449239fee7
+    keyring: keyring-lfs268-lab-da449239fee7
+    name: lfs268-lab
+    serviceAccount: lfs268-lab-vt
   webhook: lighthouse
